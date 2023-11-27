@@ -1,0 +1,139 @@
+<!--O dono desse arquivo é muito gay-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Informações do Provão Paulista</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        div.container {
+            text-align: justify;
+        }
+
+        div.container h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        div.container p {
+            font-size: 1.3em;
+        }
+
+        div.container-prova1 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        div.container-prova2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+    
+        }
+
+        .forma {
+            width: 450px;
+            height: 450px;
+            background-color: rgb(201, 138, 250);
+            margin: 0px 20px 20px 20px;
+            border-radius: 30px;
+            line-height: 1.8em;
+        }
+
+        .forma li {
+            font-size: 1.4em;
+            line-height: 1.6em;
+        }
+
+        button#botao-flecha {
+            margin: 0px;
+            background-color: transparent;
+            border: 0px;
+          
+        }
+
+        img#flecha {
+            width: 50px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="index.html"><button type="submit" id="botao-flecha"><img id="flecha" src="https://cdn-icons-png.flaticon.com/128/32/32766.png" alt=""></button></a>
+    <div class="container">
+        
+        <div class="container-prova1">
+            <div id="caixa-1" class="forma">
+                <h1>Dias/Horários</h1>
+
+                <p>
+                    2° e 3° ano dias 29/11/2023 e 30/11/2023: <br> 
+                    Abertura do portão: 7h. <br>
+                    Fechamento do portão: 7h e 45min. <br>
+                    Início da prova: 8h. <br>
+                    Término da prova: 12h.
+                </p>
+
+                <p>
+                    1° ano dias 01/11/2023 e 04/11/2023: <br>
+                    Abertura do portão: 13h. <br>
+                    Fechamento do portão: 13h e 45min. <br>
+                    Início da prova: 14h.
+                    Términe da prova: 18h.
+                </p>
+
+                <p id="bo">
+
+                </p>
+            </div>
+            <div id="caixa-2" class="forma">
+                <h1>Conteúdos</h1>
+
+                <p>
+                    Dia 01/11 - Português, inglês, física, química e biologia;  
+                </p>
+                <p>
+                    Dia 04/11 - Matemática, história, geografia, sociologia e Filosofia.
+                </p>
+            </div>
+        </div>
+        <div class="container-prova2">
+        
+                <div id="caixa-3" class="forma">
+                    <h1>Coisas para levar</h1>
+
+                    <ul>
+                        <li>Caneta azul ou preta de tubo transparente;</li>
+                        <li>Lápis;</li>
+                        <li>Borracha;</li>
+                        <li>Água;</li>
+                        <li>Barrinha de cereal;</li>
+                        <li>Documento de identificação com foto(RG);</li>
+                        <li>Não portar celular na sala de prova ou qualquer aparelho eletrônico.</li>
+                    </ul>
+                </div>
+                <div id="caixa-4" class="forma">
+                    <h1>Vagas</h1>
+
+                    <p>
+                        A Prova Paulista oferece 15.369 vagas distribuidas nas seguintes faculdades: USP, Unesp, Unicamp, Univesp e Fatecs. São 1.500 para a USP, 934 para a Unesp, 325 para a Unicamp, 2.620 vagas para a Univesp e 10.000 vagas para as Fatecs.
+                    </p>
+                  
+                </div>
+        </div>
+    </div>
+        
+</body>
+</html>

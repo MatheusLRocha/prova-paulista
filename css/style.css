@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Inter";
+    src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+    font-weight: bold;
+}
+
+:root {
+    --vermelho: #DC2828;
+    --preto: #231F20;
+}
+
+#titulo {
+    display: inline-block;
+    font-size: 3em;
+    margin-left: 15px;
+    background-color: rgb(201, 138, 250);
+    border-radius: 15px;
+    padding: 20px;
+
+}
+
+* {
+    margin-left: 15px;
+    padding-right: 15px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    
+    z-index: 0;
+}
+
+body {
+    background-color:#ffffcc;
+}
+
+.conteudo h1 {
+    font-size: 3em;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+
+span {
+    color: var(--vermelho);
+}
+
+#conteudoP {
+    font-size: 35px;
+    padding: 20px;
+}
+
+#Titulo-quiz {
+    font-size: 3em;
+    
+}
+
+#Sub-quiz{
+    font-size: 35px;
+}
+
+#quiz p{
+    font-size: 30px;
+}
+
+#pergunta {
+    font-size: 30px;
+}
+
+div.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+button.prova {
+    width: 800px;
+    height: 300px;
+    font-size: 3em;
+    margin: 40px 20px 50px 0px ;
+    border-radius: 30px 0px 30px 0px;
+    transition: transform 0.3s, background-color 0.3s;
+    background-color: blueviolet; 
+    color: white;
+    border: 0px;
+}
+
+
+button.prova:hover {
+    transform: translateY(-30px);
+    background-color: rgb(70, 125, 244);
+}
+
+#quiz button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color:rgb(164, 0, 0)
+}
+
+#butao {
+    padding-left: 40px;
+}
+
+#hero {
+    background-color: rgb(201, 138, 250);
+    border-radius: 30px;
+}
+
+#quiz-container {
+    background-color:   rgb(201, 138, 250);
+    border-radius: 30px;
+    margin-top: 10px;
+   
+    padding: 5px;
+    padding-bottom: 40px;
+}
+
+#tituloQuiz {
+    background-color:  rgb(201, 138, 250);
+    border-radius: 25px;   
+    padding: 5px;
+}
+
+
+
+

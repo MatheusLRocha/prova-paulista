@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Prova Paulista</title>
+</head>
+<body>
+    <h1 id="titulo">PROVA <span>PAULISTA</span></h1>
+    <section id="hero">
+        <div class="conteudo">
+                
+            <p id="conteudoP">Trazendo oportunidades para um futuro melhor. Transforme seu futuro e garanta uma vaga na faculdade!<br>
+                A Prova Paulista é uma avaliação que oferece uma chance aos alunos de esola pública para ingressarem nas instituições estaduais paulistas de ensino superior em 2024. <br>
+                1,1 milhão de estudantes das 1ª, 2ª e 3ª séries do Ensino Médio matriculados nas escolas estaduais de São Paulo já estão automaticamente inscritos no Provão Paulista. Ou seja, se você é aluno, basta comparecer à sua escola no dia da aplicação.</p> </div>
+
+        </div> 
+    </section>
+             <div class="button">
+                <a href="pagina01.html" target="_self"><button class="prova">Informações Provão Paulista</button></a>
+            </div>
+        <div id="tituloQuiz">
+            <h1 id="Titulo-quiz">Teste seu conhecimento!</h1>
+            <h2 id="Sub-quiz">Criamos um quiz com 6 questões de matérias que podem cair na prova. Responda as perguntas e veja sua pontuação final.</h2>
+        </div> 
+    <section id="quiz-container">
+        <div id="quiz">
+            <p id="tema"></p>
+            <p id="pergunta"></p>
+            <button class="option" onclick="proximaQuestao(0)"></button>
+            <button class="option" onclick="proximaQuestao(1)"></button> <br>
+            <button class="option" onclick="proximaQuestao(2)"></button>
+            <button class="option" id="butao" onclick="proximaQuestao(3)"></button>
+        </div>
+    </section>
+
+    <script>
+        let pergunta = document.getElementById('pergunta');
+        let tema = document.getElementById('tema')
+        let opcoes = document.querySelectorAll('.option')
+
+        let count = 0;
+        let pontuacao = 0;
+        let questoes = [
+            {
+                tema: "Química:",
+                pergunta: "Se for feita uma ligação covalente entre dois átomos, ambos com 6 elétrons na camada de valência, qual seria o tipo da ligação?",
+                opcoes: ["A) Ligação covalente simples.", "B) Ligação covalente dupla.", "C) Ligação covalente tripla.", "D) Ligação covalente dativa."],
+                correta: 1
+            },
+            {
+                tema: "Química:",
+                pergunta: "Qual o nome da ligação onde , um átomo doa seus elétrons para outro?",
+                opcoes: ["A) Ligação iônica.", "B) Ligação covalente.", "C) Ligação metalica.", "D) Nenhuma das anteriores."],
+                correta: 0
+            },
+            {
+                tema:"Matemática:",
+                pergunta: "Se temos dois triângulos, sendo que um tem os mesmos ângulos que o outro, mas medidas diferentes, podemos afirmar que são:",
+                opcoes: ["A) Triângulos congruentes.", "B) Triângulos identicos.", "C) Triângulos semelhantes.", "D) Nenhuma das anteriores."],
+                correta: 2
+            },
+            {
+                tema:"Matemática:",
+                pergunta: "Isabel escreveu em seu caderno o maior número de três algarismos que é múltiplo de 13. Qual é a soma dos algarismos do número que ela escreveu?",
+                opcoes: ["A) 30", "B) 35", "C) 20", "D) 25"],
+                correta: 3
+            },
+            {
+                tema:"Historia:",
+                pergunta: "Qual era a organização social da Europa durante as Cruzadas?",
+                opcoes: ["A) Feudaslismo", "B) Imperialismo", "C) Monarquia", "D) Anarquia"],
+                correta: 0
+            },
+            {
+                tema:"Historia:",
+                pergunta: "Qual império europeu criou um espetaculo conhecido como Naumaquia?",
+                opcoes: ["A) Império ateniense", "B) Império alemão", "C) Império romano", "D) Império austro hungaro"],
+                correta: 2
+            }
+            
+        ]
+
+        function mostrarQuestao() {
+            const questaoAtual = questoes[count]
+            pergunta.textContent = questaoAtual.pergunta
+            tema.textContent = questaoAtual.tema
+
+            questaoAtual.opcoes.forEach((opcao, i) => {
+                opcoes[i].textContent = opcao
+            })
+        }
+
+        function proximaQuestao(resposta) {
+            const questaoAtual = questoes[count]
+            if (questaoAtual.correta === resposta) {
+                pontuacao++;
+            }
+
+            count++;
+
+            if (count < questoes.length) {
+                mostrarQuestao()
+            } else {
+                mostrarResultado()
+            }
+        }
+
+        function mostrarResultado() {
+
+            if (pontuacao != 6) {
+            pergunta.textContent = "Parabéns! Pontuação final: " + pontuacao;
+            }else if(pontuacao = 6) {
+                pergunta.textContent = "Parabéns, você gabaritou! Pontuação final: " + pontuacao;
+            }
+
+            tema.textContent = "Resultado:"
+
+            opcoes.forEach((opcao) => {
+                opcao.textContent = ""
+            })
+        }
+
+        window.onload = mostrarQuestao()
+    </script>
+</body>
+</html>
